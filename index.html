@@ -4,6 +4,7 @@
     <meta name="application-name" content="Placemark" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="theme-color" content="#000000" />
+    <meta name="referrer" content="origin" />
     <link rel="preconnect" href="https://api.mapbox.com/" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
@@ -15,5 +16,10 @@
   <body>
     <div id='root'></div>
     <script type='module' src='./pages/index.tsx'></script>
+
+    <!-- 3DStreet shared components (React islands) -->
+    <!-- For local dev: http://localhost:3333/dist/placemark-islands.js -->
+    <!-- For production: https://3dstreet.app/dist/placemark-islands.js -->
+    <script src="http://localhost:3333/dist/placemark-islands.js" referrerpolicy="origin"></script>
   </body>
 </html>

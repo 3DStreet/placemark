@@ -1,3 +1,4 @@
+import { AboutDialog } from "app/components/dialogs/about";
 import BufferDialog from "app/components/dialogs/buffer";
 import { CastPropertyDialog } from "app/components/dialogs/cast_property";
 import { CheatsheetDialog } from "app/components/dialogs/cheatsheet";
@@ -73,6 +74,7 @@ export const Dialogs = memo(function Dialogs() {
     .with({ type: "import_example" }, () => (
       <ImportExampleDialog onClose={onClose} />
     ))
+    .with({ type: "about" }, () => <AboutDialog />)
     .exhaustive();
 
   return (
